@@ -13,7 +13,7 @@ exports.handler = async (event) => {
     
     // consult the pokedex docs 
     // https://pokedex-alchemy.herokuapp.com/
-    const results = await fetch(`https://pokedex-alchemy.herokuapp.com/api/pokedex?search= ${event.queryStringParameters.search}`);
+    const results = await fetch(`https://pokedex-alchemy.herokuapp.com/api/pokedex?search=${event.queryStringParameters.search}`);
     
 
     return { 
