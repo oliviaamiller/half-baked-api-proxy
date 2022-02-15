@@ -1,6 +1,8 @@
-const request = require('superagent');
+// const request = require('superagent');
 
-require('dotenv').config();
+// require('dotenv').config();
+
+const fetch = require('node-fetch');
 
 exports.handler = async (event, context) => {
   try {
