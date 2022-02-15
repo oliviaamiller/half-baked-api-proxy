@@ -5,10 +5,11 @@
 .App, body, html, #root {
   background-color: white;
   text-align: center;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   display: flex;
   justify-content: space-around;
+  
 }
 
 section {
@@ -30,12 +31,14 @@ section {
 
 .App img {
   height: 18rem;
+  margin-top: 3rem;
 }
 
 .pokemon-name {
   text-transform: uppercase;
   font-weight: 500;
-  margin:0;
+  letter-spacing: .3rem;
+  margin: 0;
 }
 
 section li {
