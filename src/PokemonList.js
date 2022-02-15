@@ -4,9 +4,9 @@ export default function PokemonList({ pokemon }) {
   return (
     <div>
       {pokemon.map((monster, i) =>
-        <div className='pokemon-list' key={`${monster}-${i}`}> 
-          <p>{monster.pokemon}</p>
+        <div key={`${monster}-${i}`}> 
           <img src={monster.url_image} />
+          <p className='pokemon-name'>{monster.pokemon}</p>
         </div>)}
     </div>
   );
