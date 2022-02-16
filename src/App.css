@@ -36,11 +36,13 @@ section {
 }
 
 .App img {
-  height: 18rem;
-  margin-top: 3rem;
+  width: 18rem;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
 }
 
-.pokemon-name {
+.search-name {
+  font-size: 1rem;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: .3rem;
