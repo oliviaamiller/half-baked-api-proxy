@@ -3,7 +3,8 @@ export default function ForecastList({ forecasts, parseTime }) {
     <div>
       {forecasts.map((forecast, i) =>
         <div key={`${forecast}-${i}`}>
-          <p>date: {parseTime(forecast.dt)}</p>
+          <img />
+          <p className='search-name'>{parseTime(forecast.dt)}</p>
           <p>{forecast.weather[0].description}</p>
           <p>low: {forecast.temp.min}°F</p>
           <p>high: {forecast.temp.max}°F</p>
