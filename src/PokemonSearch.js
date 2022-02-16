@@ -34,7 +34,7 @@ export default function PokemonSearch() {
         {/* add inputs/labels for city name, state, and country, using all the things we need with react forms. Don't forget to use the value property to sync these up with the default values in react state */}
         <input required value={search} onChange={e => setSearch(e.target.value)} />
 
-        <button>Get pokemon</button>
+        <button>Get Pokemon</button>
       </form>
       {/* Make a PokemonList component to import and use here. Use a ternery to display a loading spinner (make a <Spinner /> component for this) if the data is still loading. */}
       <div>
