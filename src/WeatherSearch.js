@@ -10,12 +10,12 @@ export default function WeatherSearch() {
   const [city, setCity] = useState('Portland');
   const [state, setState] = useState('OR');
   const [country, setCountry] = useState('USA');
-  
+
   function parseTime(dt) {
     return new Date(dt * 1000).toUTCString();
   }
-
   
+
   async function handleWeatherSubmit(e) {
     e.preventDefault();
       
@@ -28,7 +28,7 @@ export default function WeatherSearch() {
     const json = await response.json();
   
     // put the jsonified data in state and set the loading state to false
-    setForecasts(json);
+    setForecasts(json.daily);
     setLoadingState(false);
   }
       
@@ -46,7 +46,7 @@ export default function WeatherSearch() {
       </form>
       {/* Make a ForecastList component to import and use here. Use a ternery to display a loading spinner (make a <Spinner /> component for this) if the data is still loading. */}
       <div>
-        { loadingState ? <Spinner /> : <ForecastList forecasts={forecasts} parseTime={parseTime}/>}
+        { loadingState ? <Spinner /> : <ForecastList forecasts={forecasts} parseTime={parseTime} />}
       </div>
     </section>
   );
