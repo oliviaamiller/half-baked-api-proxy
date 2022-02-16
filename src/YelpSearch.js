@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import BusinessesList from './BusinessesList';
+import Spinner from './Spinner';
 
 export default function YelpSearch() {
   // you'll need to track your yelp search results, the loading state, and a form field for location with a default value.
@@ -11,9 +12,15 @@ export default function YelpSearch() {
     e.preventDefault();
   
     // set the loading state to true
+    setLoadingState(true);
     // use fetch to make a request to your netlify yelp function. Be sure to pass the search query as a query param in the URL
+    const response = await fetch(`/.netlify/functions/yelp?search=${search}`);
   
     // put the jsonified data in state and set the loading state to false
+    const json = await response.json();
+    setBusinesses(json);
+
+    setLoadingState(false);
   }
   
   return (
