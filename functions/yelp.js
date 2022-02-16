@@ -1,9 +1,10 @@
 /* eslint-disable no-console */
 // const request = require('superagent');
 
-// require('dotenv').config();
-
 const fetch = require('node-fetch');
+
+require('dotenv').config();
+
 
 exports.handler = async (event) => {
   try {
@@ -24,7 +25,7 @@ exports.handler = async (event) => {
     return { 
       statusCode: 200, 
     // this is where you shoot data back to the user. right now it's sending an empty object--replace this with the yelp data. remember, you do need to stringify it, otherwise netlify gets mad. ¯\_(ツ)_/¯
-      body: JSON.stringify(json.results),
+      body: JSON.stringify(json.businesses),
     };
   } catch (error) {
     console.log(error);
