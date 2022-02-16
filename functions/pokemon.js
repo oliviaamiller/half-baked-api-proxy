@@ -3,7 +3,7 @@
 
 const fetch = require('node-fetch');
 
-// require('dotenv').config();
+require('dotenv').config();
 
 exports.handler = async (event) => {
   try {

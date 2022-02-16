@@ -35,6 +35,10 @@ section {
   align-items: center;
 }
 
+form input {
+  margin: .2rem 0rem;
+}
+
 .App img {
   width: 18rem;
   margin-top: 3.5rem;
