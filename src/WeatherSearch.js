@@ -46,7 +46,7 @@ export default function WeatherSearch() {
       </form>
       {/* Make a ForecastList component to import and use here. Use a ternery to display a loading spinner (make a <Spinner /> component for this) if the data is still loading. */}
       <div>
-        { loadingState ? <Spinner /> : <ForecastList forecasts={forecasts} />}
+        { loadingState ? <Spinner /> : <ForecastList forecasts={forecasts} parseTime={parseTime}/>}
       </div>
     </section>
   );
