@@ -29,6 +29,12 @@ section {
   background-color: pink;
 }
 
+.App form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .App img {
   height: 18rem;
   margin-top: 3rem;
