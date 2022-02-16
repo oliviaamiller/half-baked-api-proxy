@@ -4,7 +4,14 @@ import Spinner from './Spinner';
 
 
 export default function WeatherSearch() {
-      // you'll need to track your weather search results, the loading state, and a form field for location with a default value.
+  // you'll need to track your weather search results, the loading state, and a form field for location with a default value.
+  const [loadingState, setLoadingState] = useState(false);
+  const [forecasts, setForecasts] = useState([]);
+  const [city, setCity] = useState('Portland');
+  const [state, setState] = useState('OR');
+  const [country, setCountry] = useState('USA');
+
+
   
   async function handleWeatherSubmit(e) {
     e.preventDefault();
